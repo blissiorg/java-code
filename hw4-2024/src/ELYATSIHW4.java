@@ -34,10 +34,15 @@ public class ELYATSIHW4 {
 
         Student student10 = new Student("David", "Martinez", "Cybersecurity");
         studentMap.put(student10, student10.getName());
-
+        Student student11 = new Student("David", "Martinez", "ISS");
+        studentMap.put(student11, student11.getName());
         // Print the contents of the HashMap
+
         for (Student student : studentMap.keySet()) {
-            System.out.println(student.getName() + ": " + studentMap.get(student));
+            String name = student.getName();
+            int hashCode = student.hashCode();
+            System.out.println(name + "--> " + hashCode);
         }
+        System.out.println(studentMap);
     }
 }

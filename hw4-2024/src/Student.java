@@ -25,4 +25,8 @@ public class Student {
         // Return the final hash code
         return code;
     }
+    @Override//prints the hash code in the studentMap instead of the memory address
+    public String toString() {
+        return String.valueOf(hashCode());
+    }
 }
